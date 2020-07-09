@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>com.oxford</groupId>
+		<artifactId>chova-siege</artifactId>
+		<version>1.0.1</version>
+	</parent>
+
+	<artifactId>segie-all</artifactId>
+	<name>${project.artifactId}</name>
+	<description>攻城狮Chova的开发过程中使用到的有价值的工具类集</description>
+	<url>https://github.com/ChovaVea/chova-siege</url>
+
+	<dependencies>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<!-- 创建源码jar -->
+							<createSourcesJar>true</createSourcesJar>
+							<artifactSet>
+								<includes>
+									<include>${project.groupId}:*:*</include>
+								</includes>
+							</artifactSet>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
