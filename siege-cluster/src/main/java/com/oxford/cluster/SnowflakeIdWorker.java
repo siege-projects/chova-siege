@@ -28,13 +28,13 @@ public class SnowflakeIdWorker {
     private final long workerIdBits = 4L;
 
     /** 数据标识Id所占的位数 */
-    private final long datacenterIdBits = 4L;
+    private final long dataCenterIdBits = 4L;
 
     /** 支持的最大机器id,结果为 31 */
     private final long maxWorkerId = ~(-1L << workerIdBits);
 
     /** 支持的最大数据标识Id,结果为 31 */
-    private final long maxDatacenterId = ~(-1L << datacenterIdBits);
+    private final long maxDataCenterId = ~(-1L << dataCenterIdBits);
 
     /** 序列在Id中所占的位数 */
     private  final long sequenceBits = 12L;
@@ -54,7 +54,7 @@ public class SnowflakeIdWorker {
      *      private final long maxWorkerId = ~(-1L << workerIdBits);
      *      private final long maxDatacenterId = ~(-1L << datacenterIdBits);
      */
-    private final long timestampLeftShift = sequenceBits + workerIdBits + datacenterIdBits;
+    private final long timestampLeftShift = sequenceBits + workerIdBits + dataCenterIdBits;
 
     /** 机器Id向左移序列的位数 12位 */
     private final long sequenceMask = ~(-1 << sequenceBits);
@@ -63,18 +63,53 @@ public class SnowflakeIdWorker {
     private long workerId;
 
     /** 数据中心Id, 5位最大为 31 */
-    private long datacenterId;
+    private long dataCenterId;
 
     /** 毫秒内序列,12位最大为 4095 */
     private long sequence = 0L;
 
     /** 上次生成Id的时间戳 */
     private long lastTimestamp = -1L;
-
-//=====================================构造函数==========================================
+//=====================================调用方法==========================================
 
     /**
-     * SnowflakeIdWorker构造函数
+     * SnowflakeIdWorker生成ID
+     * 默认生成方法的工作机器ID为0,数据中心ID为0
+     *
+     * @return long 数据ID
+     */
+    public static long nextId() {
+        SnowflakeIdWorker idWorker = new SnowflakeIdWorker(0, 0);
+        return idWorker.next();
+    }
+
+    /**
+     * 设置服务器数目来生成SnowflakeIdWorker生成ID
+     *
+     * @param workerId 工作机器ID
+     * @return long 数据ID
+     */
+    public static long nextId(long workerId) {
+        SnowflakeIdWorker idWorker = new SnowflakeIdWorker(workerId, 0);
+        return idWorker.next();
+    }
+
+    /**
+     * 设置服务器数目来生成SnowflakeIdWorker生成ID
+     *
+     * @param workerId     工作机器ID
+     * @param dataCenterId 数据中心Id
+     * @return long 数据ID
+     */
+    public static long nextId(long workerId, long dataCenterId) {
+        SnowflakeIdWorker idWorker = new SnowflakeIdWorker(workerId, dataCenterId);
+        return idWorker.next();
+    }
+
+//=====================================构造方法==========================================
+
+    /**
+     * SnowflakeIdWorker构造方法
      *
      * @param workerId 工作机器Id, 10位最大为 1023
      */
@@ -86,17 +121,17 @@ public class SnowflakeIdWorker {
      * SnowflakeIdWorker构造函数
      *
      * @param workerId 工作机器Id, 10位最大为 1023
-     * @param datacenterId 数据中心Id, 5位最大为 31
+     * @param dataCenterId 数据中心Id, 5位最大为 31
      */
-    private SnowflakeIdWorker(long workerId, long datacenterId) {
+    private SnowflakeIdWorker(long workerId, long dataCenterId) {
         if (workerId > maxWorkerId || workerId < 0) {
             throw new IllegalArgumentException(String.format("worker Id can't be greater than %d or less than 0", maxWorkerId));
         }
-        if (datacenterId > maxDatacenterId || datacenterId < 0) {
-            throw new IllegalArgumentException(String.format("datacenter Id can't be greater than %d or less than 0", maxDatacenterId));
+        if (dataCenterId > maxDataCenterId || dataCenterId < 0) {
+            throw new IllegalArgumentException(String.format("dataCenterId Id can't be greater than %d or less than 0", maxDataCenterId));
         }
         this.workerId = workerId;
-        this.datacenterId =datacenterId;
+        this.dataCenterId = dataCenterId;
     }
 
 //====================================ID生成方法==========================================
@@ -107,7 +142,7 @@ public class SnowflakeIdWorker {
      *
      * @return long SnowflakeId
      */
-    public synchronized long nextId() {
+    public synchronized long next() {
         long timestamp = timeGen();
 
         /*
@@ -137,7 +172,7 @@ public class SnowflakeIdWorker {
 
         // 移位并通过或运算拼到一起组成64位的ID
         return ((timestamp - twepoch) << timestampLeftShift)
-                | (datacenterId) << datacenterIdShift
+                | (dataCenterId) << datacenterIdShift
                 | (workerId) << workerIdShift
                 | sequence;
     }
@@ -164,6 +199,5 @@ public class SnowflakeIdWorker {
     private long timeGen() {
         return System.currentTimeMillis();
     }
-
 
 }
