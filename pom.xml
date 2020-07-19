@@ -16,6 +16,7 @@
     <modules>
         <module>siege-all</module>
         <module>siege-cluster</module>
+        <module>siege-core</module>
         <module>siege-http</module>
         <module>siege-io</module>
 
