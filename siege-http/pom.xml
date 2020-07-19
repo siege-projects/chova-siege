@@ -17,6 +17,11 @@
 	<description>HTTP处理相关工具类</description>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.60</version>
+		</dependency>
 	</dependencies>
 
 </project>

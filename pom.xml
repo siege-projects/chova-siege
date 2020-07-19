@@ -15,8 +15,10 @@
 
     <modules>
         <module>siege-all</module>
-        <module>siege-io</module>
+        <module>siege-cluster</module>
         <module>siege-http</module>
+        <module>siege-io</module>
+
     </modules>
 
     <properties>
