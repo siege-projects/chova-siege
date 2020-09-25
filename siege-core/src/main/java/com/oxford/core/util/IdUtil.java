@@ -17,8 +17,10 @@ public class IdUtil {
      *
      * @return String类型的UUID
      */
-    public static String generateUUID() {
+    public static String generateUuid() {
         TimeBasedGenerator timeBasedGenerator = Generators.timeBasedGenerator(EthernetAddress.fromInterface());
         return timeBasedGenerator.generate().toString();
+
+
     }
 }

@@ -1,8 +1,5 @@
 package com.oxford.core.thread.produceconsume;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * 仓库类
  *
@@ -10,7 +7,6 @@ import org.slf4j.LoggerFactory;
  * @date 2020/9/23
  */
 public class Depot {
-    private static Logger log = LoggerFactory.getLogger(Depot.class);
 
     /**
      * 仓库容量
@@ -55,7 +51,7 @@ public class Depot {
                 notifyAll();
             }
         } catch (InterruptedException e) {
-            log.error(e.getMessage(), e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -86,7 +82,7 @@ public class Depot {
                 notifyAll();
             }
         } catch (InterruptedException e) {
-            log.error(e.getMessage(), e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 }
