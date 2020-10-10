@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>com.oxford</groupId>
+        <artifactId>chova-siege</artifactId>
+        <version>1.0.1</version>
+    </parent>
+
+    <artifactId>siege-crypto</artifactId>
+    <name>${project.artifactId}</name>
+    <description>加密解密工具类</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.oxford</groupId>
+            <artifactId>siege-core</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
