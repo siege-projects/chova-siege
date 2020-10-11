@@ -1,4 +1,4 @@
-package com.oxford.crypto.symmetric.constant;
+package com.oxford.crypto.constant;
 
 /**
  * AES加密解密 常量类

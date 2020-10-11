@@ -11,9 +11,8 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Base64;
 
-import static com.oxford.crypto.symmetric.constant.CryptoConstant.AES_KEY;
-import static com.oxford.crypto.symmetric.constant.CryptoConstant.CHARACTER_UTF_8;
-
+import static com.oxford.crypto.constant.CryptoConstant.AES_KEY;
+import static com.oxford.crypto.constant.CryptoConstant.CHARACTER_UTF_8;
 
 /**
  * 对称密钥加密AES
