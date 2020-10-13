@@ -13,7 +13,7 @@ import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.Random;
 
-import static com.oxford.crypto.symmetric.constant.CryptoConstant.*;
+import static com.oxford.crypto.constant.CryptoConstant.*;
 
 /**
  * 对称加密DES
