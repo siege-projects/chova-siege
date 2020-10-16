@@ -17,7 +17,7 @@ import static com.oxford.crypto.constant.CryptoConstant.CHARACTER_UTF_8;
 /**
  * 对称密钥加密AES
  * <p>
- * AES加密解密工具类,返回Base64
+ * AES加密解密工具类，返回Base64
  *
  * @author Chova
  * @date 2020/9/30
@@ -29,7 +29,7 @@ public class AES {
      *
      * @param data 需要加密的数据
      * @param key  加密密钥
-     * @return String 加密的数据,加密失败则返回null
+     * @return String 加密的数据，加密失败则返回null
      */
     public static String encrypt(@NotNull String data, String key) {
         return doAes(data, key, Cipher.ENCRYPT_MODE);
@@ -40,7 +40,7 @@ public class AES {
      *
      * @param encryptData 加密的数据
      * @param key         解密密钥
-     * @return String 解密的数据,解密失败则返回null
+     * @return String 解密的数据，解密失败则返回null
      */
     public static String decrypt(@NotNull String encryptData, String key) {
         return doAes(encryptData, key, Cipher.DECRYPT_MODE);
@@ -71,7 +71,7 @@ public class AES {
      * @param data 需要加密或者解密的数据
      * @param key  加密或者解密的密钥
      * @param mode 加密或者解密的模式
-     * @return String 加密或者解密成功的数据,如果加密或者解密失败则返回null
+     * @return String 加密或者解密成功的数据，如果加密或者解密失败则返回null
      */
     private static String doAes(@NotNull String data, String key, int mode) {
         boolean isEncrypt = mode == Cipher.ENCRYPT_MODE;

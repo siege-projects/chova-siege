@@ -74,7 +74,7 @@ public class SnowflakeIdWorker {
 
     /**
      * SnowflakeIdWorker生成ID
-     * 默认生成方法的工作机器ID为0,数据中心ID为0
+     * 默认生成方法的工作机器ID为0，数据中心ID为0
      *
      * @return long 数据ID
      */
@@ -111,7 +111,7 @@ public class SnowflakeIdWorker {
     /**
      * SnowflakeIdWorker构造方法
      *
-     * @param workerId 工作机器Id, 10位最大为 1023
+     * @param workerId 工作机器Id，10位最大为 1023
      */
     private SnowflakeIdWorker(long workerId) {
         this(workerId,0);
@@ -120,8 +120,8 @@ public class SnowflakeIdWorker {
     /**
      * SnowflakeIdWorker构造函数
      *
-     * @param workerId 工作机器Id, 10位最大为 1023
-     * @param dataCenterId 数据中心Id, 5位最大为 31
+     * @param workerId 工作机器Id，10位最大为 1023
+     * @param dataCenterId 数据中心Id，5位最大为 31
      */
     private SnowflakeIdWorker(long workerId, long dataCenterId) {
         if (workerId > maxWorkerId || workerId < 0) {
@@ -194,7 +194,7 @@ public class SnowflakeIdWorker {
     /**
      * 返回以毫秒为单位的当前时间
      *
-     * @return 当前时间,以毫秒为单位
+     * @return 当前时间，以毫秒为单位
      */
     private long timeGen() {
         return System.currentTimeMillis();

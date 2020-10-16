@@ -18,7 +18,7 @@ import static com.oxford.crypto.constant.CryptoConstant.*;
 /**
  * 对称加密DES
  * <p>
- * DES加密解密工具类,使用PKCS5Padding的ECB模式填充
+ * DES加密解密工具类，使用PKCS5Padding的ECB模式填充
  *
  * @author Chova
  * @date 2020/10/9

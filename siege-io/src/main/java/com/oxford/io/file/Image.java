@@ -11,7 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 public class Image {
 
     /**
-     * 根据路径名称,判断当前路径文件是否为图片
+     * 根据路径名称，判断当前路径文件是否为图片
      *
      * @param pathName 路径名称
      * @return boolean 是否为图片
