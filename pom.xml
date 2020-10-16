@@ -27,7 +27,6 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-
         <!-- versions -->
         <compile.version>8</compile.version>
         <junit.version>4.13.1</junit.version>
