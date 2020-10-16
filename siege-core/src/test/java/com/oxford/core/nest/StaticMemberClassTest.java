@@ -52,6 +52,7 @@ public class StaticMemberClassTest {
         // 在外部类中创建类内部的静态成员类的实例
         StaticMemberClass staticMemberClass = new StaticMemberClass();
         System.out.println("创建类内部静态成员类实例:" + staticMemberClass);
+        staticMemberClass.execute();
 
         /*
          * 外部类不能直接访问类内部静态成员类中的成员变量,包括非静态成员变量和静态成员变量
