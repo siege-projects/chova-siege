@@ -6,7 +6,7 @@ package com.oxford.core.nest;
  * @author Chova
  * @date 2020/10/16
  */
-public class MethodInnerClassTest {
+public class LocalInnerClassTest {
 
     public void execute() {
         /*
@@ -15,19 +15,19 @@ public class MethodInnerClassTest {
          */
         final int finalMethodVar = 6;
 
-        class MethodInnerClass {
+        class LocalInnerClass {
 
             public void execute() {
                 System.out.println("在方法内部类中访问方法内final修饰符的局部变量:" + finalMethodVar);
             }
         }
         // 局部内部类只能在方法内部实例化
-        MethodInnerClass methodInnerClass = new MethodInnerClass();
+        LocalInnerClass methodInnerClass = new LocalInnerClass();
         methodInnerClass.execute();
     }
 
     public static void main(String[] args) {
-        MethodInnerClassTest methodInnerClassTest = new MethodInnerClassTest();
-        methodInnerClassTest.execute();
+        LocalInnerClassTest localInnerClassTest = new LocalInnerClassTest();
+        localInnerClassTest.execute();
     }
 }
