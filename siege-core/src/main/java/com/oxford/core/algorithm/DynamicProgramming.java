@@ -10,6 +10,9 @@ public class DynamicProgramming {
 
     /**
      * 获取两个字符串的最小编辑距离
+     *  - 给定两个字符串s1和s2
+     *  - 只能使用插入,删除,替换3种操作将s1转变为s2
+     *  - 求最小操作数
      *
      * @param s1 字符串1
      * @param s2 字符串2
