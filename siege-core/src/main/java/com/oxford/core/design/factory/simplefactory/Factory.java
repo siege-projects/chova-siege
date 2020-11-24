@@ -25,9 +25,9 @@ public class Factory {
      * @return Product 产品生产方法
      */
     public Product factory(String productType) {
-        if ("A".equals(productType)) {
+        if (PRODUCT_A.equals(productType)) {
             return new ConcreteProductA();
-        } else if ("B".equals(productType)) {
+        } else if (PRODUCT_B.equals(productType)) {
             return new ConcreteProductB();
         } else {
             System.out.println("请输入正确的产品类型");
