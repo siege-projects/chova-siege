@@ -24,7 +24,7 @@ public class Factory {
      * @param productType 产品类型
      * @return Product 产品生产方法
      */
-    public Product factory(String productType) {
+    public static Product factory(String productType) {
         if (PRODUCT_A.equals(productType)) {
             return new ConcreteProductA();
         } else if (PRODUCT_B.equals(productType)) {

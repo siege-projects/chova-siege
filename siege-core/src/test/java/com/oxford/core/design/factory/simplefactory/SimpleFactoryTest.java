@@ -9,8 +9,7 @@ package com.oxford.core.design.factory.simplefactory;
 public class SimpleFactoryTest {
 
     public static void main(String[] args) {
-        Factory factory = new Factory();
-        Product product = factory.factory("A");
+        Product product = Factory.factory("A");
         product.produce();
     }
 }
