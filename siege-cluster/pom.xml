@@ -20,8 +20,10 @@
         <springboot.aop.version>2.3.3.RELEASE</springboot.aop.version>
         <springboot.redis.version>2.3.2.RELEASE</springboot.redis.version>
         <spring.web.version>5.2.3.RELEASE</spring.web.version>
+        <spring.core.version>5.2.9.RELEASE</spring.core.version>
         <servlet.version>4.0.1</servlet.version>
         <jackson.version>2.11.2</jackson.version>
+        <quartz.version>2.3.2</quartz.version>
     </properties>
 
     <dependencies>
@@ -49,6 +51,17 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.core.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz.version}</version>
         </dependency>
     </dependencies>
 
