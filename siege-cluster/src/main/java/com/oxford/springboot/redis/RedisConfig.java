@@ -30,6 +30,11 @@ public class RedisConfig {
 
         // 使用Jackson2JsonRedisSerializer序列化代替原生的JdkSerializable序列化
         Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
+        /*
+         * 通过自定义ObjectMapper策略
+         *  - 可以避免ClassCastException异常
+         *  - 可以对额外的数据结构和字段进行处理
+         */
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
         objectMapper.activateDefaultTyping(objectMapper.getPolymorphicTypeValidator(), ObjectMapper.DefaultTyping.NON_FINAL);
