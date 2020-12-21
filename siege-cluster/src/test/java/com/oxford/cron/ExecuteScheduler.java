@@ -22,7 +22,7 @@ public class ExecuteScheduler {
                 .withIdentity("job")
                 .build();
 
-        // 创建触发器实例，每隔1s执行一次
+        // 创建触发器实例，每隔1s执行一次，执行10次
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity("trigger")
                 .startNow()
