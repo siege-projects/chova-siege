@@ -17,10 +17,10 @@
     <description>集群处理相关工具类</description>
 
     <properties>
-        <springboot.aop.version>2.3.3.RELEASE</springboot.aop.version>
-        <springboot.redis.version>2.3.2.RELEASE</springboot.redis.version>
-        <spring.web.version>5.2.3.RELEASE</spring.web.version>
-        <spring.core.version>5.2.9.RELEASE</spring.core.version>
+        <springboot.aop.version>2.3.6.RELEASE</springboot.aop.version>
+        <springboot.redis.version>2.3.6.RELEASE</springboot.redis.version>
+        <spring.web.version>5.2.11.RELEASE</spring.web.version>
+        <spring.core.version>5.2.11.RELEASE</spring.core.version>
         <servlet.version>4.0.1</servlet.version>
         <jackson.version>2.11.2</jackson.version>
         <quartz.version>2.3.2</quartz.version>
