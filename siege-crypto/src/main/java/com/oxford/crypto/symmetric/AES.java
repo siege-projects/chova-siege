@@ -1,6 +1,7 @@
 package com.oxford.crypto.symmetric;
 
-import com.sun.istack.internal.NotNull;
+
+import org.springframework.lang.NonNull;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -31,7 +32,7 @@ public class AES {
      * @param key  加密密钥
      * @return String 加密的数据，加密失败则返回null
      */
-    public static String encrypt(@NotNull String data, String key) {
+    public static String encrypt(@NonNull String data, String key) {
         return doAes(data, key, Cipher.ENCRYPT_MODE);
     }
 
@@ -42,7 +43,7 @@ public class AES {
      * @param key         解密密钥
      * @return String 解密的数据，解密失败则返回null
      */
-    public static String decrypt(@NotNull String encryptData, String key) {
+    public static String decrypt(@NonNull String encryptData, String key) {
         return doAes(encryptData, key, Cipher.DECRYPT_MODE);
     }
 
@@ -73,7 +74,7 @@ public class AES {
      * @param mode 加密或者解密的模式
      * @return String 加密或者解密成功的数据，如果加密或者解密失败则返回null
      */
-    private static String doAes(@NotNull String data, String key, int mode) {
+    private static String doAes(@NonNull String data, String key, int mode) {
         boolean isEncrypt = mode == Cipher.ENCRYPT_MODE;
         byte[] content;
 
