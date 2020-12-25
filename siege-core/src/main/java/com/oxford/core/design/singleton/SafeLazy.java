@@ -13,6 +13,11 @@ public class SafeLazy {
     private SafeLazy() {
     }
 
+    /**
+     * 使用线程安全懒汉实现单例模式
+     *
+     * @return SafeLazy 一个单例实例
+     */
     public static synchronized SafeLazy getInstance() {
         if (null == instance) {
             instance = new SafeLazy();

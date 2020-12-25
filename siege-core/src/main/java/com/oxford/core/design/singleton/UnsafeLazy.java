@@ -13,6 +13,11 @@ public class UnsafeLazy {
     private UnsafeLazy() {
     }
 
+    /**
+     * 使用线程不安全懒汉实现单例模式
+     *
+     * @return UnsafeLazy 一个单例实例.多线程可能会返回多个实例,无法正常工作
+     */
     public static UnsafeLazy getInstance() {
         if (null == instance) {
             instance = new UnsafeLazy();
