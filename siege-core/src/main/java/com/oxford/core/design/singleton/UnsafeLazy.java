@@ -10,7 +10,7 @@ public class UnsafeLazy {
 
     private static UnsafeLazy instance;
 
-    public UnsafeLazy() {
+    private UnsafeLazy() {
     }
 
     public static UnsafeLazy getInstance() {
