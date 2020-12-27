@@ -16,16 +16,21 @@
     <name>${project.artifactId}</name>
     <description>核心相关工具类</description>
 
+    <properties>
+        <faster.xml.uuid.version>4.0.1</faster.xml.uuid.version>
+        <spring.core.version>5.2.11.RELEASE</spring.core.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.uuid</groupId>
             <artifactId>java-uuid-generator</artifactId>
-            <version>3.1.4</version>
+            <version>${faster.xml.uuid.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>5.2.11.RELEASE</version>
+            <version>${spring.core.version}</version>
         </dependency>
     </dependencies>
 
