@@ -16,6 +16,11 @@ public class Hungry {
     private Hungry() {
     }
 
+    /**
+     * 使用饿汉实现单例模式
+     *
+     * @return Hungry 一个单例实例
+     */
     public static Hungry getInstance() {
         return instance;
     }
