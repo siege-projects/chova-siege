@@ -8,7 +8,9 @@ package com.oxford.core.design.singleton;
  */
 public class Hungry {
 
-    // 饿汉 - 在类加载时就完成初始化
+    /**
+     * 饿汉 - 在类加载时就完成初始化
+     */
     private static final Hungry instance = new Hungry();
 
     private Hungry() {
