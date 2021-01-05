@@ -14,7 +14,9 @@ import java.lang.reflect.Method;
  */
 public class CglibProxy implements MethodInterceptor {
 
-    // 维护一个真实对象
+    /**
+     * 维护一个真实对象
+     */
     private Real real;
 
     public CglibProxy(Real real) {

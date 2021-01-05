@@ -10,14 +10,20 @@ import java.lang.reflect.Proxy;
  */
 public class DynamicProxy {
 
-    // 维护一个真实对象
+    /**
+     * 维护一个真实对象
+     */
     private Real real;
 
     public DynamicProxy(Real real) {
         this.real = real;
     }
 
-    // 生成真实对象的代理对象
+    /**
+     * 生成真实对象的代理对象
+     *
+     * @return Object 真实对象的代理对象
+     */
     public Object getProxyInstance() {
         return Proxy.newProxyInstance(
                 real.getClass().getClassLoader(),
