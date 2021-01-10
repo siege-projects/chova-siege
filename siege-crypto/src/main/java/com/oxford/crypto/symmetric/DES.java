@@ -1,8 +1,5 @@
 package com.oxford.crypto.symmetric;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
@@ -34,8 +31,8 @@ public class DES {
      */
     public static String encrypt(String data, String key) {
         byte[] encryptData = doDes(data.getBytes(), key, Cipher.ENCRYPT_MODE);
-        BASE64Encoder encoder = new BASE64Encoder();
-        return encoder.encode(encryptData);
+        Base64.Encoder encoder = Base64.getEncoder();
+        return encoder.encodeToString(encryptData);
     }
 
     /**
@@ -47,8 +44,8 @@ public class DES {
      */
     public static String decrypt(String encryptData, String key) {
         try {
-            BASE64Decoder decoder = new BASE64Decoder();
-            byte[] encryptByte = decoder.decodeBuffer(encryptData);
+            Base64.Decoder decoder = Base64.getDecoder();
+            byte[] encryptByte = decoder.decode(encryptData);
             byte[] decryptByte = doDes(encryptByte, key, Cipher.DECRYPT_MODE);
             return new String(decryptByte, CHARACTER_UTF_8);
         } catch (IOException e) {
