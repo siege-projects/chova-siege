@@ -7,7 +7,7 @@ import org.quartz.impl.StdSchedulerFactory;
  * 动态任务调度器Scheduler
  *
  * @author Chova
- * @date 2020-12-20
+ * @date 2020/12/20
  */
 public class ExecuteScheduler {
     public static void main(String[] args) throws SchedulerException {

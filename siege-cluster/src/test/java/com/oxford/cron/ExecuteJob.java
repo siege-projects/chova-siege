@@ -12,7 +12,7 @@ import java.util.Random;
  * 任务Job
  *
  * @author Chova
- * @date 2020-12-16
+ * @date 2020/12/16
  */
 public class ExecuteJob implements Job {
     @Override

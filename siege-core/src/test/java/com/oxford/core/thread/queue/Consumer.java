@@ -4,7 +4,7 @@ package com.oxford.core.thread.queue;
  * 消费者
  *
  * @author Chova
- * @date 2020-09-25
+ * @date 2020/09/25
  */
 public class Consumer implements Runnable {
 

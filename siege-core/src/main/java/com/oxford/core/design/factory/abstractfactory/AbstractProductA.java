@@ -4,7 +4,7 @@ package com.oxford.core.design.factory.abstractfactory;
  * 抽象产品 - A类
  *
  * @author Chova
- * @date 2020/12/7
+ * @date 2020/12/07
  */
 public interface AbstractProductA {
 

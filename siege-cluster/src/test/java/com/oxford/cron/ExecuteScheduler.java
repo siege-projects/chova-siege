@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * 任务调度器Scheduler
  *
  * @author Chova
- * @date 2020-12-16
+ * @date 2020/12/16
  */
 public class ExecuteScheduler {
     public static void main(String[] args) throws SchedulerException, InterruptedException {

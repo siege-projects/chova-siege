@@ -4,7 +4,7 @@ package com.oxford.core.design.factory.abstractfactory;
  * 抽象工厂模式 - 测试类
  *
  * @author Chova
- * @date 2020/12/7
+ * @date 2020/12/07
  */
 public class AbstractFactoryTest {
     public static void main(String[] args) {

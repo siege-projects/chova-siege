@@ -4,7 +4,7 @@ package com.oxford.core.design.factory.abstractfactory;
  * 工厂实现 - 产品B
  *
  * @author Chova
- * @date 2020/12/7
+ * @date 2020/12/07
  */
 public class ConcreteFactoryB implements AbstractFactory {
 

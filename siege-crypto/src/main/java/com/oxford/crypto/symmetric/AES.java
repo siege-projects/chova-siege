@@ -21,7 +21,7 @@ import static com.oxford.crypto.constant.CryptoConstant.CHARACTER_UTF_8;
  * AES加密解密工具类，返回Base64
  *
  * @author Chova
- * @date 2020/9/30
+ * @date 2020/09/30
  */
 public class AES {
 

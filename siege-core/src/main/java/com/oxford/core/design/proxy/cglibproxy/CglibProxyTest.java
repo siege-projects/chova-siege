@@ -4,7 +4,7 @@ package com.oxford.core.design.proxy.cglibproxy;
  * CGLIB代理 - 测试类
  *
  * @author Chova
- * @date 2020/11/6
+ * @date 2020/11/06
  */
 public class CglibProxyTest {
 

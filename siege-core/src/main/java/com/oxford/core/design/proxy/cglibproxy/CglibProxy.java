@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
  * CGLIB代理 - 代理对象
  *
  * @author Chova
- * @date 2020/11/6
+ * @date 2020/11/06
  */
 public class CglibProxy implements MethodInterceptor {
 

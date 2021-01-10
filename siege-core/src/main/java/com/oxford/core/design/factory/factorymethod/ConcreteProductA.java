@@ -4,7 +4,7 @@ package com.oxford.core.design.factory.factorymethod;
  * 具体产品 - A
  *
  * @author Chova
- * @date 2020/12/4
+ * @date 2020/12/04
  */
 public class ConcreteProductA implements Product {
 

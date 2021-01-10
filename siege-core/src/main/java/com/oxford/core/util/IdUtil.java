@@ -8,7 +8,7 @@ import com.fasterxml.uuid.impl.TimeBasedGenerator;
  * ID工具类
  *
  * @author Chova
- * @date 2020-07-19
+ * @date 2020/07/19
  */
 public class IdUtil {
 

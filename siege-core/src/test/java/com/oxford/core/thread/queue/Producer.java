@@ -4,7 +4,7 @@ package com.oxford.core.thread.queue;
  * 生产者
  *
  * @author Chova
- * @date 2020-09-25
+ * @date 2020/09/25
  */
 public class Producer implements Runnable {
 

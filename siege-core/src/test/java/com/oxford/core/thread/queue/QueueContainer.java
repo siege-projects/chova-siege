@@ -7,6 +7,7 @@ import java.util.concurrent.BlockingQueue;
  * 定义一个容器类
  *
  * @author Chova
+ * @date 2020/09/25
  */
 public class QueueContainer {
     // 新建一个容量为3的队列容器

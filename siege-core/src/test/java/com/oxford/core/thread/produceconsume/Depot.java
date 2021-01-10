@@ -4,7 +4,7 @@ package com.oxford.core.thread.produceconsume;
  * 仓库类
  *
  * @author Chova
- * @date 2020/9/23
+ * @date 2020/09/23
  */
 public class Depot {
 

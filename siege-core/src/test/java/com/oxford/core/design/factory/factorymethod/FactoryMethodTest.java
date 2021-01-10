@@ -4,7 +4,7 @@ package com.oxford.core.design.factory.factorymethod;
  * 工厂方法模式 - 测试类
  *
  * @author Chova
- * @date 2020/12/4
+ * @date 2020/12/04
  */
 public class FactoryMethodTest {
 

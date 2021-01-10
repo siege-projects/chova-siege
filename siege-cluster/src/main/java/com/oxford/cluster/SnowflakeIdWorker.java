@@ -15,7 +15,7 @@ package com.oxford.cluster;
  * 加起来刚好64位，为一个Long型
  *
  * @author Chova
- * @date 2020/7/9
+ * @date 2020/07/09
  */
 public class SnowflakeIdWorker {
 

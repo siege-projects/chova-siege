@@ -4,7 +4,7 @@ package com.oxford.core.design.factory.factorymethod;
  * 工厂
  *
  * @author Chova
- * @date 2020/12/4
+ * @date 2020/12/04
  */
 public interface Factory {
 

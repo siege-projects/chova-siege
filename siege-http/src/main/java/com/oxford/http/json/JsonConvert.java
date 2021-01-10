@@ -11,7 +11,7 @@ import java.util.List;
  * Json转换工具类
  *
  * @author Chova
- * @date 2020-07-19
+ * @date 2020/07/19
  */
 public class JsonConvert {
     public static final SerializerFeature[] FEATURESWITHNULLVALUE = {SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullBooleanAsFalse, SerializerFeature.WriteNullListAsEmpty, SerializerFeature.WriteNullNumberAsZero, SerializerFeature.WriteNullStringAsEmpty};
