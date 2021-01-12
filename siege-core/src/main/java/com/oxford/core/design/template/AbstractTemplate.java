@@ -10,8 +10,9 @@ public abstract class AbstractTemplate {
 
     /**
      * 模板方法
+     * 定义为final类型,表明基本顶级逻辑步骤不能重写,子类只能重写实现
      */
-    public void templateMethod() {
+    public final void templateMethod() {
         abstractMethod();
         hookMethod();
         concreteMethod();
