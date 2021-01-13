@@ -1,4 +1,4 @@
-package com.oxford.springboot.kafka.consumer;
+package com.oxford.framework.springboot.kafka.consumer;
 
 import org.springframework.boot.SpringApplication;
 

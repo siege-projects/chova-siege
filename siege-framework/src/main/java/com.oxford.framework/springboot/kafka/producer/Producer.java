@@ -1,4 +1,4 @@
-package com.oxford.springboot.kafka.producer;
+package com.oxford.framework.springboot.kafka.producer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;

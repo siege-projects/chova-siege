@@ -19,6 +19,7 @@
         <module>siege-core</module>
         <module>siege-crypto</module>
         <module>siege-extra</module>
+        <module>siege-framework</module>
         <module>siege-http</module>
         <module>siege-io</module>
     </modules>

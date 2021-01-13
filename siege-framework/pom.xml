@@ -12,19 +12,31 @@
         <version>1.0.1</version>
     </parent>
 
-    <artifactId>siege-cluster</artifactId>
+    <artifactId>siege-framework</artifactId>
     <name>${project.artifactId}</name>
-    <description>集群处理相关工具类</description>
+    <description>框架工具类</description>
 
     <properties>
+        <springboot.aop.version>2.3.6.RELEASE</springboot.aop.version>
+        <springboot.redis.version>2.3.6.RELEASE</springboot.redis.version>
         <spring.web.version>5.2.11.RELEASE</spring.web.version>
         <spring.core.version>5.2.11.RELEASE</spring.core.version>
         <servlet.version>4.0.1</servlet.version>
         <jackson.version>2.11.2</jackson.version>
-        <quartz.version>2.3.2</quartz.version>
+        <kafka.version>2.6.3</kafka.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${springboot.aop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>${springboot.redis.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
@@ -47,9 +59,9 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz</artifactId>
-            <version>${quartz.version}</version>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>${kafka.version}</version>
         </dependency>
     </dependencies>
 

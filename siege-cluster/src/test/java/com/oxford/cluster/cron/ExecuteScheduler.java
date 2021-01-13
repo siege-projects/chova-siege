@@ -1,4 +1,4 @@
-package com.oxford.cron;
+package com.oxford.cluster.cron;
 
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;

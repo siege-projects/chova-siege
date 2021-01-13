@@ -1,4 +1,4 @@
-package com.oxford.cron.dynamic;
+package com.oxford.cluster.cron.dynamic;
 
 import org.quartz.Job;
 import org.quartz.JobDataMap;

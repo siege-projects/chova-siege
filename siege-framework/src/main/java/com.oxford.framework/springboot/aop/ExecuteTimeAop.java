@@ -1,4 +1,4 @@
-package com.oxford.springboot.aop;
+package com.oxford.framework.springboot.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -34,7 +34,7 @@ public class ExecuteTimeAop {
      * - 第三个 * 表示任意方法
      * - .. 表示匹配任意数量的参数
      */
-    @Pointcut("execution(* com.oxford.springboot..*.*(..))")
+    @Pointcut("execution(* *(..))")
     public void executionTimePointcut() {
     }
 

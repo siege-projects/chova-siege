@@ -2,7 +2,7 @@ package com.oxford.http.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.oxford.crypto.symmetric.AES;
-import com.oxford.springboot.redis.Redis;
+import com.oxford.framework.springboot.redis.Redis;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;

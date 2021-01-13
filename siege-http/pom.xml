@@ -19,6 +19,7 @@
     <properties>
         <fastjson.version>1.2.73</fastjson.version>
         <spring.webmvc.version>5.2.11.RELEASE</spring.webmvc.version>
+        <springboot.websocket.version>2.3.6.RELEASE</springboot.websocket.version>
     </properties>
 
     <dependencies>
@@ -33,6 +34,11 @@
             <version>${spring.webmvc.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+            <version>${springboot.websocket.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.oxford</groupId>
             <artifactId>siege-cluster</artifactId>
             <version>${project.parent.version}</version>
@@ -43,7 +49,13 @@
             <artifactId>siege-crypto</artifactId>
             <version>${project.parent.version}</version>
             <scope>compile</scope>
-		</dependency>
-	</dependencies>
+        </dependency>
+        <dependency>
+            <groupId>com.oxford</groupId>
+            <artifactId>siege-framework</artifactId>
+            <version>1.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>
