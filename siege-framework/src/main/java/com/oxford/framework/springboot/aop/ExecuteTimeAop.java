@@ -34,7 +34,7 @@ public class ExecuteTimeAop {
      * - 第三个 * 表示任意方法
      * - .. 表示匹配任意数量的参数
      */
-    @Pointcut("execution(* *(..))")
+    @Pointcut("execution(* com.oxford.framework.springboot..*(..))")
     public void executionTimePointcut() {
     }
 
