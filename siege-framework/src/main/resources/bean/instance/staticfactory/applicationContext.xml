@@ -3,10 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- 定义一个ID为Bean的Spring Bean对象
-         class属性指定了对应的工厂实现类为StaticBeanFactory的静态方法实现
-         factory-method指定了Spring容器调用工厂类的getBean()方法获取Bean实例
-    -->
-    <bean id="Bean" class="com.oxford.framework.spring.bean.instance.staticfactory.StaticBeanFactory"
+    <!--
+        定义一个ID为Bean的Spring Bean对象
+        class属性指定了对应的工厂实现类为StaticBeanFactory的静态方法实现
+        factory-method指定了Spring容器调用工厂类的getBean()方法获取Bean实例
+      -->
+    <bean id="bean" class="com.oxford.framework.spring.bean.instance.staticfactory.StaticBeanFactory"
           factory-method="getBean"/>
 </beans>

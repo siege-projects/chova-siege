@@ -11,7 +11,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class ConstructorTest {
     public static void main(String[] args) {
-
         // 定义Spring的xml配置文件applicationContext.xml的路径
         String xmlPath = "bean/instance/constructor/applicationContext.xml";
 
@@ -19,6 +18,6 @@ public class ConstructorTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 
         // 通过Spring容器获取Bean实例
-        System.out.println(applicationContext.getBean("Bean"));
+        System.out.println("Bean实例:" + applicationContext.getBean("bean"));
     }
 }

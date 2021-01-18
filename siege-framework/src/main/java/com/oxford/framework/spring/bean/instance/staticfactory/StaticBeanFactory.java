@@ -9,7 +9,7 @@ package com.oxford.framework.spring.bean.instance.staticfactory;
 public class StaticBeanFactory {
 
     /**
-     * 静态Bean工厂类中获取Bean实例的方法
+     * 静态Bean工厂类中获取Bean实例的静态方法
      *
      * @return Bean Bean类的Bean实例
      */
