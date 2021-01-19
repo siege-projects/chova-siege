@@ -123,7 +123,7 @@ public class WebSocket {
      * @param error   WebSocket错误
      */
     @OnError
-    public void OnError(Session session, Throwable error) {
+    public void onError(Session session, Throwable error) {
         System.out.println("WebSocket异常:" + error.getMessage());
     }
 
