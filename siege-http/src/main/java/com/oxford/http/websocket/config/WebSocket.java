@@ -2,12 +2,10 @@ package com.oxford.http.websocket.config;
 
 import org.springframework.stereotype.Component;
 
-import javax.websocket.OnClose;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
+import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
+import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -87,9 +85,21 @@ public class WebSocket {
         System.out.println("用户:" + userId + "加入连接. 当前在线人数:" + getOnlineCount());
     }
 
+    /**
+     * WebSocket接收到客户端请求信息时调用的方法
+     *
+     * @param message 客户端请求信息
+     * @param session 可选Session参数
+     */
     @OnMessage
     public void onMessage(String message, Session session) {
-
+        System.out.println("客户端传入的消息:" + message);
+        // 消息内容
+        String sendMessage = message.split("-")[0];
+        // 用户ID
+        String userId = message.split("-")[1];
+        // 给指定的用户发送消息
+        sendToUser(userId, sendMessage);
     }
 
     /**
@@ -103,6 +113,63 @@ public class WebSocket {
             // 当前在线人数-1
             subOnlineCount();
             System.out.println("用户:" + userId + "关闭连接. 当前在线人数:" + getOnlineCount());
+        }
+    }
+
+    /**
+     * WebSocket异常时调用的方法
+     *
+     * @param session Session参数
+     * @param error   WebSocket错误
+     */
+    @OnError
+    public void OnError(Session session, Throwable error) {
+        System.out.println("WebSocket异常:" + error.getMessage());
+    }
+
+    /**
+     * 发送消息
+     *
+     * @param message 消息内容
+     */
+    public void sendMessage(String message) throws IOException {
+        /*
+         * getBasicRemote() - 同步发送消息
+         * getAsyncRemote() - 异步发送消息
+         */
+        this.session.getBasicRemote().sendText(message);
+    }
+
+    /**
+     * 给指定的用户发送消息
+     *
+     * @param toUserId    消息送达的用户ID
+     * @param sendMessage 发送的消息
+     */
+    public void sendToUser(String toUserId, String sendMessage) {
+        try {
+            if (null != webSocketMap.get(toUserId)) {
+                webSocketMap.get(toUserId).sendMessage("来自用户" + userId + "发送的消息,内容:" + sendMessage);
+            } else if (null != webSocketMap.get(userId)) {
+                webSocketMap.get(userId).sendMessage("用户" + toUserId + "已经离线,未接收到消息.");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 给所有用户发送消息
+     *
+     * @param message 发送的消息
+     */
+    public void sendToAll(String message) {
+        try {
+            for (String key : webSocketMap.keySet()) {
+                webSocketMap.get(key).sendMessage("来自用户" + userId + "发送的消息, 内容:" + message);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
