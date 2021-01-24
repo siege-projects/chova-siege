@@ -1,4 +1,4 @@
-package com.oxford.core.algorithm;
+package com.oxford.core.algorithm.dp;
 
 /**
  * 动态规划相关算法实现
