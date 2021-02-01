@@ -20,7 +20,5 @@ public class IdUtil {
     public static String generateUuid() {
         TimeBasedGenerator timeBasedGenerator = Generators.timeBasedGenerator(EthernetAddress.fromInterface());
         return timeBasedGenerator.generate().toString();
-
-
     }
 }

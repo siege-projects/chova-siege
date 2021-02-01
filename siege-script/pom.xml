@@ -16,7 +16,4 @@
     <name>${project.artifactId}</name>
     <description>脚本工具类</description>
 
-    <dependencies>
-    </dependencies>
-
 </project>
