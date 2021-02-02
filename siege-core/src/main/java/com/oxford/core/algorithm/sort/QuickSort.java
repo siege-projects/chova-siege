@@ -23,7 +23,7 @@ public class QuickSort {
     }
 
     /**
-     * 使用快速排序算法对从位置left到位置right进行排序
+     * 使用快速排序算法对从位置left到位置right的数组进行排序
      *
      * @param array 数组
      * @param left  数组左边位置
