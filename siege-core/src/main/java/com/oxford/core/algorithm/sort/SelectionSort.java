@@ -39,7 +39,7 @@ public class SelectionSort {
             int round = 0;
 
             /**
-             * index 控制比较的位置
+             * index 控制比较的索引
              */
             int index = 0;
 
