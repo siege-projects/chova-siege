@@ -36,12 +36,12 @@ public class SelectionSort {
             /**
              * round 控制比较的轮数
              */
-            int round = 0;
+            int round;
 
             /**
              * index 控制比较的索引
              */
-            int index = 0;
+            int index;
 
             for (round = 0; round < length - 1; round++) {
                 int minValueIndex = round;

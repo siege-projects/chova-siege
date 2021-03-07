@@ -34,12 +34,12 @@ public class BubbleSort {
             /**
              * round 控制比较的轮数
              */
-            int round = 0;
+            int round;
 
             /**
              * time 控制每轮比较的次数
              */
-            int time = 0;
+            int time;
 
             for (round = 0; round < length; round++) {
                 // length - 1 - round 用于 减少比较的次数。每轮会比较得出一个最大数，下一轮只要比较上一轮最大数前面的数组序列
