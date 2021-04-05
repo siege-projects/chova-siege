@@ -29,7 +29,7 @@ public class BubbleSort {
      */
     public static void bubbleSort(int[] array, int left, int right) {
         if (null != array && array.length > 0 && left < right) {
-            int length = right - left + 1;
+            int length = array.length;
 
             /**
              * round 控制比较的轮数

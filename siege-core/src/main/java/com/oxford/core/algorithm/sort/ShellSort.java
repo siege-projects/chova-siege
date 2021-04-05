@@ -31,7 +31,7 @@ public class ShellSort {
      */
     public static void shellSort(int[] array, int left, int right) {
         if (null != array && array.length > 0 && left < right) {
-            int length = right - left + 1;
+            int length = array.length;
 
             /**
              * 当前比较位置

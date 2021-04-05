@@ -31,7 +31,7 @@ public class HeapSort {
      */
     public static void heapSort(int[] array, int left, int right) {
         if (null != array && array.length > 0 && left < right) {
-            int length = right - left + 1;
+            int length = array.length;
 
             // 调整构建大顶堆
             for (int index = (length >> 1) - 1; index >= 0; index--) {
