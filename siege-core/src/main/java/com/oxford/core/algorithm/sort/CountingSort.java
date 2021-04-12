@@ -15,7 +15,7 @@ public class CountingSort {
      * - 对统计完成的计数数组中每个索引位置的值累加，得到待排序数组每个值存放的位置
      * - 填充目标数组：将排序好的计数数组中的值按照次序填充到待排序数组中
      *
-     * @param array
+     * @param array 数组
      */
     public static void countingSort(int[] array) {
         countingSort(array, 0, array.length - 1);
