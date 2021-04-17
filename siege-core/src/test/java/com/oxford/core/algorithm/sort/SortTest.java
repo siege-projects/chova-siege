@@ -36,6 +36,9 @@ public class SortTest {
         // 计数排序
         // countingSort(array);
 
+        // 桶排序
+        // bucketSort(array);
+
         Arrays.stream(array).forEach(i -> System.out.print(i + ","));
     }
 }
