@@ -39,6 +39,9 @@ public class SortTest {
         // 桶排序
         // bucketSort(array);
 
+        // 基数排序
+        // radixSort(array);
+
         Arrays.stream(array).forEach(i -> System.out.print(i + ","));
     }
 }
