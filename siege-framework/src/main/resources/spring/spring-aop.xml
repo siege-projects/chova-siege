@@ -11,7 +11,7 @@
     <!-- 配置AspectJ自动代理 -->
     <aop:aspectj-autoproxy/>
 
-    <!-- 定义一个ID为Bean的SpringBean,类属性class指定对应的构造器包下的Bean -->
+    <!-- 定义一个ID为Bean的SpringBean，类属性class指定对应的构造器包下的Bean -->
     <bean id="bean" class="com.oxford.framework.spring.bean.instance.constructor.Bean"/>
 
     <!-- 配置切面 -->
@@ -20,7 +20,7 @@
     <!-- AOP配置 -->
     <aop:config>
         <!-- 配置切点表达式 -->
-        <aop:pointcut id="pointcut" expression="execution(* com.oxford.framework.spring..*(..))"/>
+        <aop:pointcut id="pointcut" expression="execution(* com.oxford.framework.spring..*.*(..))"/>
         <!-- 配置切点的切面和增强通知 -->
         <aop:aspect ref="executeInterceptorAop">
             <aop:before method="doBefore" pointcut-ref="pointcut"/>

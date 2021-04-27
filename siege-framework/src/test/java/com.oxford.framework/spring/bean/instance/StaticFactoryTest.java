@@ -14,7 +14,7 @@ public class StaticFactoryTest {
         // 定义Spring的xml配置文件application.xml的路径
         String xmlPath = "spring/bean/instance/staticfactory/applicationContext.xml";
 
-        // 初始化Spring容器,加载xml配置文件并对Bean进行实例化
+        // 初始化Spring容器，加载xml配置文件并对Bean进行实例化
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 
         // 通过Spring容器获取Bean实例

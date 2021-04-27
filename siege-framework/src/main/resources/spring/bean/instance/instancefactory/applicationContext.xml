@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- 配置实例工厂,class属性指定实例工厂对应的工厂实现类为InstanceBeanFactory -->
+    <!-- 配置实例工厂，class属性指定实例工厂对应的工厂实现类为InstanceBeanFactory -->
     <bean id="instanceBeanFactory"
           class="com.oxford.framework.spring.bean.instance.instancefactory.InstanceBeanFactory"/>
 

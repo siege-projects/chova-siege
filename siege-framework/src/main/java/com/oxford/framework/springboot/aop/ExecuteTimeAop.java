@@ -34,7 +34,7 @@ public class ExecuteTimeAop {
      * - 第三个 * 表示任意方法
      * - .. 表示匹配任意数量的参数
      */
-    @Pointcut("execution(* com.oxford.framework.springboot..*(..))")
+    @Pointcut("execution(* com.oxford.framework.springboot..*.*(..))")
     public void executionTimePointcut() {
     }
 
@@ -45,7 +45,7 @@ public class ExecuteTimeAop {
      * @return Object 流程执行结果
      * @throws Throwable 抛出异常
      */
-    @Around("executionTimePointcut()")
+    @Around(value = "executionTimePointcut()")
     public Object doAround(ProceedingJoinPoint joinPoint) throws Throwable {
         LOGGER.info("===========================Method Start============================");
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
