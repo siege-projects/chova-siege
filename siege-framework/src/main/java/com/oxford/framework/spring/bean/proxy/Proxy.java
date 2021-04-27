@@ -18,7 +18,7 @@ public class Proxy implements InvocationHandler {
 
     /**
      * 使用JDK自带的动态代理方法实现对接口的代理操作
-     * 代理对象只能是接口,不能是普通的类
+     * 代理对象只能是接口，不能是普通的类
      *
      * @param proxy  需要代理的类
      * @param method 方法操作

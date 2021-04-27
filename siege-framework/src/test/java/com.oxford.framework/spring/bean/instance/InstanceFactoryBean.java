@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class InstanceFactoryBean {
     public static void main(String[] args) {
         // 定义Spring的xml配置文件application.xml的路径
-        String xmlPath = "bean/instance/instancefactory/applicationContext.xml";
+        String xmlPath = "spring/bean/instance/instancefactory/applicationContext.xml";
 
         // 初始化Spring容器,加载xml配置文件并对Bean进行实例化
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);

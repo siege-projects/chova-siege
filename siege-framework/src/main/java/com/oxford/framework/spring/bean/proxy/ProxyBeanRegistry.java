@@ -55,21 +55,21 @@ public class ProxyBeanRegistry implements BeanDefinitionRegistryPostProcessor, A
         /*
          * 首先获取需要进行代理Bean操作的类
          *
-         * 通常是使用反射获取需要进行代理Bean操作的类集合.使用Set防止有重复的类
+         * 通常是使用反射获取需要进行代理Bean操作的类集合。使用Set防止有重复的类
          *
-         * 使用反射可以获取指定包下面的类,或者是注解标注的类
+         * 使用反射可以获取指定包下面的类，或者是注解标注的类
          */
         Set<Class<?>> classSet = proxyBeanScan(basePackage);
         for (Class beanClass : classSet) {
             BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(beanClass);
             GenericBeanDefinition beanDefinition = (GenericBeanDefinition) beanDefinitionBuilder.getRawBeanDefinition();
             /*
-             * 给Bean对象的属性中注入对应的实例.比如MyBatis中注入的DataSource和SqlSessionFactory
+             * 给Bean对象的属性中注入对应的实例。比如MyBatis中注入的DataSource和SqlSessionFactory
              *
-             * 注意:
-             * - 如果使用genericBeanDefinition.getPropertyValues()方式,形如genericBeanDefinition.getPropertyValues().add("beanInterface", beanClass),
-             * 那么要求在FactoryBean中提供setter方法,否则会导致注入失败
-             * - 如果使用genericBeanDefinition.getConstructorArgumentValues()方式,那么要求在FactoryBean中提供包含beanClass属性的构造方法,否则会导致注入失败
+             * 注意：
+             * - 如果使用genericBeanDefinition.getPropertyValues()方式，形如genericBeanDefinition.getPropertyValues().add("beanInterface", beanClass)，
+             * 那么要求在FactoryBean中提供setter方法，否则会导致注入失败
+             * - 如果使用genericBeanDefinition.getConstructorArgumentValues()方式，那么要求在FactoryBean中提供包含beanClass属性的构造方法，否则会导致注入失败
              */
             beanDefinition.getConstructorArgumentValues().addGenericArgumentValue(beanClass);
             // 将Bean对象对应的实例注入到Bean对象的属性中.可以使用AUTOWIRE_BY_TYPE方式和AUTOWIRE_BY_NAME方式
@@ -104,7 +104,7 @@ public class ProxyBeanRegistry implements BeanDefinitionRegistryPostProcessor, A
 
         try {
             Resource[] resources = resourcePatternResolver.getResources(proxyBeanPath);
-            // 遍历包路径下的所有类,将类添加到代理Bean集合中
+            // 遍历包路径下的所有类，将类添加到代理Bean集合中
             for (Resource resource : resources) {
                 if (resource.isReadable()) {
                     // 使用类的读取器获取类的元素据

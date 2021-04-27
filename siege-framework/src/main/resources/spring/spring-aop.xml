@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 配置自动扫描的包 -->
+    <context:component-scan base-package="spring"/>
+
+    <!-- 配置AspectJ自动代理 -->
+    <aop:aspectj-autoproxy/>
+
+    <!-- 定义一个ID为Bean的SpringBean,类属性class指定对应的构造器包下的Bean -->
+    <bean id="bean" class="com.oxford.framework.spring.bean.instance.constructor.Bean"/>
+
+    <!-- 配置切面 -->
+    <bean id="executeInterceptorAop" class="com.oxford.framework.spring.aop.ExecuteInterceptorAop"/>
+
+    <!-- AOP配置 -->
+    <aop:config>
+        <!-- 配置切点表达式 -->
+        <aop:pointcut id="pointcut" expression="execution(* com.oxford.framework.spring..*(..))"/>
+        <!-- 配置切点的切面和增强通知 -->
+        <aop:aspect ref="executeInterceptorAop">
+            <aop:before method="doBefore" pointcut-ref="pointcut"/>
+            <aop:after method="doAfter" pointcut-ref="pointcut"/>
+            <aop:after-returning method="doAfterReturning" pointcut-ref="pointcut" returning="result"/>
+            <aop:after-throwing method="doAfterThrowing" pointcut-ref="pointcut" throwing="exception"/>
+            <aop:around method="doAround" pointcut-ref="pointcut"/>
+        </aop:aspect>
+    </aop:config>
+</beans>
