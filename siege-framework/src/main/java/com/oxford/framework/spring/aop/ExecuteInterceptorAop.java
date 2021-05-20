@@ -2,6 +2,8 @@ package com.oxford.framework.spring.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,6 +14,8 @@ import java.util.List;
  * @author Chova
  * @date 2021/04/26
  */
+@Component
+@Aspect
 public class ExecuteInterceptorAop {
 
     /**
