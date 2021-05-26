@@ -41,7 +41,7 @@ public class QueueContainer {
     /**
      * 获取容器中物品的数量
      *
-     * @return
+     * @return int 容器中物品的数量
      */
     public int getSize() {
         return queueContainer.size();

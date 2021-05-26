@@ -9,7 +9,7 @@ package com.oxford.core.design.singleton;
 public class StaticNest {
 
     private static class Nest {
-        private static final StaticNest instance = new StaticNest();
+        private static final StaticNest INSTANCE = new StaticNest();
     }
 
     private StaticNest() {
@@ -20,7 +20,7 @@ public class StaticNest {
      *
      * @return StaticNest 一个单例实例
      */
-    public static final StaticNest getInstance() {
-        return Nest.instance;
+    public static StaticNest getInstance() {
+        return Nest.INSTANCE;
     }
 }

@@ -14,7 +14,7 @@ public class Code {
     /**
      * 将字符串进行HTTP编码
      *
-     * @param text
+     * @param text 字符串文本
      * @return String HTTP编码
      */
     public static String urlEncode(String text) {

@@ -113,7 +113,7 @@ public class JsonConvert {
      * @param obj 要转换成Json对象的Java对象
      * @return 从Java对象转换成的Json对象
      */
-    public static JSONObject converObjectToJSONObject(Object obj) {
+    public static JSONObject convertObjectToJSONObject(Object obj) {
         try {
             JSONObject jsonObject = (JSONObject) JSONObject.toJSON(obj);
             return jsonObject;

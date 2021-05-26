@@ -13,8 +13,6 @@ public class ParameterTypeAnonymousInnerClass {
     public static void main(String[] args) {
         ParameterType parameterType = new ParameterType();
 
-        parameterType.parameterMethod(() -> {
-            System.out.println("参数式匿名内部类实现方法");
-        });
+        parameterType.parameterMethod(() -> System.out.println("参数式匿名内部类实现方法"));
     }
 }

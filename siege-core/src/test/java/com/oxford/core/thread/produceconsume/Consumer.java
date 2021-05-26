@@ -19,10 +19,6 @@ public class Consumer {
      * @param val 需要消费的数量
      */
     public void consume(final int val) {
-        new Thread() {
-            public void run() {
-                depot.consume(val);
-            }
-        }.start();
+        new Thread(() -> depot.consume(val)).start();
     }
 }

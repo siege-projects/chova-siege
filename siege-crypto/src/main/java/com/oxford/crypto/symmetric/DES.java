@@ -4,13 +4,14 @@ import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
-import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.Random;
 
-import static com.oxford.crypto.constant.CryptoConstant.*;
+import static com.oxford.crypto.constant.CryptoConstant.DES_ECB_PKCS5;
+import static com.oxford.crypto.constant.CryptoConstant.DES_KEY;
 
 /**
  * 对称加密DES
@@ -47,8 +48,8 @@ public class DES {
             Base64.Decoder decoder = Base64.getDecoder();
             byte[] encryptByte = decoder.decode(encryptData);
             byte[] decryptByte = doDes(encryptByte, key, Cipher.DECRYPT_MODE);
-            return new String(decryptByte, CHARACTER_UTF_8);
-        } catch (IOException e) {
+            return new String(decryptByte, StandardCharsets.UTF_8);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;

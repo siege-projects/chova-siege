@@ -19,10 +19,6 @@ public class Producer {
      * @param val 需要生产的数量
      */
     public void produce(final int val) {
-        new Thread() {
-            public void run() {
-                depot.produce(val);
-            }
-        }.start();
+        new Thread(() -> depot.produce(val)).start();
     }
 }

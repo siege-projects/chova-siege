@@ -7,13 +7,13 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Base64;
 
 import static com.oxford.crypto.constant.CryptoConstant.AES_KEY;
-import static com.oxford.crypto.constant.CryptoConstant.CHARACTER_UTF_8;
 
 /**
  * 对称密钥加密AES
@@ -81,7 +81,7 @@ public class AES {
         byte[] codeKey = Base64.getDecoder().decode(key);
         try {
             if (isEncrypt) {
-                content = data.getBytes(CHARACTER_UTF_8);
+                content = data.getBytes(StandardCharsets.UTF_8);
             } else {
                 content = Base64.getDecoder().decode(data);
             }
@@ -94,7 +94,7 @@ public class AES {
             if (isEncrypt) {
                 return Base64.getEncoder().encodeToString(result);
             } else {
-                return new String(result, CHARACTER_UTF_8);
+                return new String(result, StandardCharsets.UTF_8);
             }
         } catch (Exception e) {
             e.printStackTrace();

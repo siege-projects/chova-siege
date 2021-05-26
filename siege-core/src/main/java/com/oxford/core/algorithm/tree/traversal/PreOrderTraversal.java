@@ -87,9 +87,7 @@ public class PreOrderTraversal {
         }
         // 访问节点的值，输出遍历的结果
         if (null != traversalList) {
-            traversalList.forEach(node -> {
-                visit(node);
-            });
+            traversalList.forEach(TreeNode::visit);
         }
     }
 }

@@ -1,8 +1,8 @@
 package com.oxford.crypto.digest;
 
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
-import static com.oxford.crypto.constant.CryptoConstant.CHARACTER_UTF_8;
 import static com.oxford.crypto.constant.CryptoConstant.MD5;
 
 /**
@@ -25,7 +25,7 @@ public class MD5 {
         try {
             MessageDigest digest = MessageDigest.getInstance(MD5);
             if (null == charsetName || "".equals(charsetName)) {
-                encryptData = byteArray2HexString(digest.digest(data.getBytes(CHARACTER_UTF_8)));
+                encryptData = byteArray2HexString(digest.digest(data.getBytes(StandardCharsets.UTF_8)));
             } else {
                 encryptData = byteArray2HexString(digest.digest(data.getBytes(charsetName)));
             }

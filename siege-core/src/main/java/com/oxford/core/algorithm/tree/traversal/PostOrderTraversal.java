@@ -56,9 +56,7 @@ public class PostOrderTraversal {
         // 将遍历列表反转后访问节点的值，输出遍历的结果
         if (!traversalList.isEmpty()) {
             Collections.reverse(traversalList);
-            traversalList.forEach(node -> {
-                visit(node);
-            });
+            traversalList.forEach(TreeNode::visit);
         }
     }
 
@@ -99,9 +97,7 @@ public class PostOrderTraversal {
 
         // 访问节点的值，输出遍历的结果
         if (!traversalList.isEmpty()) {
-            traversalList.forEach(node -> {
-                visit(node);
-            });
+            traversalList.forEach(TreeNode::visit);
         }
 
     }

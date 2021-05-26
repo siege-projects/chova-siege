@@ -8,11 +8,6 @@ package com.oxford.crypto.constant;
  */
 public class CryptoConstant {
     /**
-     * UTF-8字符集
-     */
-    public static final String CHARACTER_UTF_8 = "UTF-8";
-
-    /**
      * 密钥AES
      */
     public static final String AES_KEY = "AES";

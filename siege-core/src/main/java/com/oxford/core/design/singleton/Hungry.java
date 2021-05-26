@@ -11,7 +11,7 @@ public class Hungry {
     /**
      * 饿汉 - 在类加载时就完成初始化
      */
-    private static final Hungry instance = new Hungry();
+    private static final Hungry INSTANCE = new Hungry();
 
     private Hungry() {
     }
@@ -22,6 +22,6 @@ public class Hungry {
      * @return Hungry 一个单例实例
      */
     public static Hungry getInstance() {
-        return instance;
+        return INSTANCE;
     }
 }
