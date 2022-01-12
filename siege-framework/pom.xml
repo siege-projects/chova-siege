@@ -20,7 +20,7 @@
         <springboot.aop.version>2.3.6.RELEASE</springboot.aop.version>
         <springboot.redis.version>2.3.6.RELEASE</springboot.redis.version>
         <spring.web.version>5.2.11.RELEASE</spring.web.version>
-        <spring.core.version>5.2.11.RELEASE</spring.core.version>
+        <spring.core.version>5.3.14</spring.core.version>
         <servlet.version>4.0.1</servlet.version>
         <jackson.version>2.11.2</jackson.version>
         <kafka.version>2.6.3</kafka.version>
