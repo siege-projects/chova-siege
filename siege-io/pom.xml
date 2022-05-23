@@ -7,9 +7,9 @@
 	<packaging>jar</packaging>
 
 	<parent>
-		<groupId>com.oxford</groupId>
+		<groupId>com.oxford.siege</groupId>
 		<artifactId>chova-siege</artifactId>
-		<version>1.0.1</version>
+		<version>1.0.0</version>
 	</parent>
 
 	<artifactId>siege-io</artifactId>

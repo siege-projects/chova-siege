@@ -6,9 +6,9 @@
     <packaging>pom</packaging>
 
 
-    <groupId>com.oxford</groupId>
+    <groupId>com.oxford.siege</groupId>
     <artifactId>chova-siege</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
     <name>chova-siege</name>
     <description>攻城狮Chova的开发过程中使用到的有价值的工具类集</description>
     <url>https://github.com/ChovaVea/chova-siege</url>
